@@ -1,0 +1,324 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f3f0ff;
+    text-align: center;
+}
+
+/* Heading */
+
+h1 {
+    color: #222;
+    font-size: 45px;
+}
+
+h2 {
+    color: #6a3fb5;
+}
+
+/* Navbar */
+
+nav {
+    background-color: #222;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 0 0 15px 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #b98cff;
+}
+
+nav a:first-child {
+    color: #b98cff;
+}
+
+nav a:first-child:hover {
+    color: white;
+}
+
+/* Intro */
+
+.intro {
+    font-size: 20px;
+    color: #555;
+    margin-top: -10px;
+    margin-bottom: 30px;
+}
+
+/* About */
+
+.about {
+    background-color: white;
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px #d8cef0;
+}
+
+.about h2 {
+    margin-bottom: 10px;
+}
+
+.about p {
+    color: #555;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+/* Education */
+
+.education {
+    background-color: white;
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px #d8cef0;
+    transition: 0.3s;
+}
+
+.education:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px #b9a9d6;
+}
+
+.education h3 {
+    color: #6a3fb5;
+    margin-bottom: 5px;
+}
+
+.education p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Skills */
+
+.skills {
+    background-color: white;
+    width: 70%;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px #d8cef0;
+}
+
+.skills span {
+    display: inline-block;
+    background-color: #e8ddff;
+    color: #222;
+    padding: 10px 18px;
+    margin: 5px;
+    border-radius: 20px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.skills span:hover {
+    background-color: #222;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Projects */
+
+.projects {
+    width: 85%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project {
+    width: 28%;
+    background-color: white;
+    margin: 20px 0;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px #d8cef0;
+    transition: 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 20px #b9a9d6;
+}
+
+.project h3 {
+    color: #6a3fb5;
+    margin-bottom: 10px;
+}
+
+.project p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Goal */
+
+.goal {
+    background-color: white;
+    width: 60%;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px #d8cef0;
+    transition: 0.3s;
+}
+
+.goal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px #b9a9d6;
+}
+
+/* Contact */
+
+.contact {
+    margin: 40px auto;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+}
+
+.contact a {
+    display: inline-block;
+    background-color: #222;
+    color: white;
+    padding: 12px 25px;
+    margin: 5px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    background-color: #6a3fb5;
+    transform: translateY(-3px);
+}
+
+/* Footer */
+
+footer {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Mobile */
+
+
+.hero-btn:hover {
+    background-color: #222;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .skills,
+    .about,
+    .education,
+    .goal,
+    .projects {
+        width: 85%;
+    }
+
+    .project {
+        margin: 15px 0;
+    }
+
+    .hero {
+        width: 85%;
+        padding: 30px 15px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 7px;
+    }
+
+}
+
+
+.github-btn {
+    display: inline-block;
+    background-color: #222;
+    color: white;
+    padding: 12px 25px;
+    margin-top: 15px;
+    margin-left: 8px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.github-btn:hover {
+    background-color: #6a3fb5;
+    transform: translateY(-3px);
+}
+
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #e8ddff;
+    box-shadow: 0 5px 15px #d8cef0;
+    margin-bottom: 20px;
+}
+
+/* Hero Animation */
+
+/* Hero Animation */
+
+.hero {
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.projects {
+    width: 85%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
