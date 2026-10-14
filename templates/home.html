@@ -20,6 +20,7 @@
 
 <div class="hero">
 <img src="{% static 'image/kajal.png' %}" alt="Kajal" class="profile-img">
+
     <h1>Hello, I'm Kajal 👋</h1>
 
     <p class="intro">
@@ -132,5 +133,66 @@
     <p>© 2026 Kajal | Made with 💜 using Django</p>
 </footer>
 </section>
+
+
+<!-- Rating and Feedback Section -->
+<section id="feedback">
+    <h2>⭐ Rate My Portfolio🙌🏻</h2>
+    <p>Your feedback helps me improve my skills!❤️ </p>
+
+    <form method="POST" action="/">
+        {% csrf_token %}
+
+        <label for="name">Your Name</label>
+        <input
+            type="text"
+            id="name"
+            name="name"
+            maxlength="100"
+            placeholder="Enter your name"
+            required
+        >
+
+        <label for="rating">Your Rating</label>
+        <select id="rating" name="rating" required>
+            <option value="">Choose your rating</option>
+            <option value="1">⭐ 1 Star</option>
+            <option value="2">⭐⭐ 2 Stars</option>
+            <option value="3">⭐⭐⭐ 3 Stars</option>
+            <option value="4">⭐⭐⭐⭐ 4 Stars</option>
+            <option value="5">⭐⭐⭐⭐⭐ 5 Stars</option>
+        </select>
+
+        <label for="message">Your Feedback</label>
+        <textarea
+            id="message"
+            name="message"
+            rows="4"
+            placeholder="Write your feedback here..."
+            required
+        ></textarea>
+
+        <button type="submit">💝 Submit Feedback 💝</button>
+    </form>
+
+    <h2>💬 Visitor Reviews</h2>
+
+    {% for feedback in feedbacks %}
+        <div class="feedback-card">
+            <h3>{{ feedback.name }}</h3>
+
+            <p>Rating: {{ feedback.rating }}/5 ⭐</p>
+
+            <p>{{ feedback.message|linebreaksbr }}</p>
+
+            <small>{{ feedback.created_at|date:"d M Y" }}</small>
+        </div>
+    {% empty %}
+        <p>No reviews yet. Be the first to share your feedback! 😊</p>
+    {% endfor %}
+</section>
+
+
+
 </body>
 </html>
